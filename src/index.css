@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-display: 'Playfair Display', 'Cormorant Garamond', serif;
+    --font-handwriting: 'Caveat', 'Dancing Script', cursive;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-serif-cormorant {
+  font-family: var(--font-serif);
+}
+
+.font-display-playfair {
+  font-family: var(--font-display);
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.font-sans-clean {
+  font-family: var(--font-sans);
+}
+
+/* Luxury handmade paper texture - extremely subtle and organic */
+.luxury-paper-texture {
+  background-color: #FFFDF9;
+  background-image: 
+    radial-gradient(rgba(248, 200, 220, 0.4) 0.5px, transparent 0.5px),
+    radial-gradient(rgba(220, 204, 244, 0.3) 0.5px, transparent 0.5px);
+  background-size: 32px 32px, 48px 48px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Subtle luxury card shadows with soft deep rose undertone */
+.luxury-card-shadow {
+  box-shadow: 
+    0 2px 4px rgba(165, 42, 58, 0.03),
+    0 12px 32px -4px rgba(158, 48, 69, 0.08),
+    0 0 0 1px rgba(220, 204, 244, 0.45);
+}
+
+.luxury-card-hover {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-card-hover:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 
+    0 6px 16px rgba(165, 42, 58, 0.06),
+    0 20px 48px -6px rgba(158, 48, 69, 0.12),
+    0 0 0 1px rgba(214, 168, 95, 0.55);
+}
+
+.letter-shadow {
+  box-shadow: 
+    0 2px 4px rgba(0,0,0,0.02), 
+    0 10px 30px rgba(158, 48, 69, 0.06),
+    0 25px 60px -12px rgba(158, 48, 69, 0.09);
+}
+
+/* Realistic handmade washi tape */
+.washi-tape-pink {
+  background-color: rgba(248, 200, 220, 0.75);
+  box-shadow: inset 0 0 0 1px rgba(220, 204, 244, 0.5), 0 1px 2px rgba(0,0,0,0.04);
+  backdrop-filter: blur(2px);
+}
+
+.washi-tape-lavender {
+  background-color: rgba(220, 204, 244, 0.75);
+  box-shadow: inset 0 0 0 1px rgba(248, 200, 220, 0.5), 0 1px 2px rgba(0,0,0,0.04);
+  backdrop-filter: blur(2px);
+}
+
+.washi-tape-gold {
+  background-color: rgba(214, 168, 95, 0.65);
+  box-shadow: inset 0 0 0 1px rgba(255, 248, 242, 0.6), 0 1px 2px rgba(0,0,0,0.04);
+  backdrop-filter: blur(2px);
+}
+
+/* Dynamic shifting atmospheric light gradients */
+@keyframes atmosphericDrift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.65;
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.08);
+    opacity: 0.85;
+  }
+  66% {
+    transform: translate(-25px, 25px) scale(0.95);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.65;
+  }
+}
+
+.animate-atmosphere {
+  animation: atmosphericDrift 22s ease-in-out infinite;
+}
+
+.animate-atmosphere-reverse {
+  animation: atmosphericDrift 26s ease-in-out infinite reverse;
+}
+
+/* Diya Flame Flicker - refined multi-phase */
+@keyframes flameFlickerV2 {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 12px rgba(214, 168, 95, 0.8)) drop-shadow(0 0 26px rgba(165, 42, 58, 0.45));
+  }
+  20% {
+    transform: scale(1.05, 0.95) rotate(1.8deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(214, 168, 95, 0.95)) drop-shadow(0 0 34px rgba(165, 42, 58, 0.5));
+  }
+  40% {
+    transform: scale(0.96, 1.06) rotate(-0.8deg);
+    opacity: 0.92;
+    filter: drop-shadow(0 0 14px rgba(214, 168, 95, 0.75)) drop-shadow(0 0 22px rgba(165, 42, 58, 0.4));
+  }
+  70% {
+    transform: scale(1.03, 0.97) rotate(1.2deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 16px rgba(214, 168, 95, 0.85)) drop-shadow(0 0 30px rgba(165, 42, 58, 0.48));
+  }
+}
+
+.animate-diya-flame {
+  animation: flameFlickerV2 2.6s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Soft festive dust drifting */
+@keyframes magicalDust {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  80% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(-160px) translateX(40px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-dust {
+  animation: magicalDust 10s ease-in-out infinite;
+}
+
+/* Custom Cursor */
+@media (pointer: fine) {
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}

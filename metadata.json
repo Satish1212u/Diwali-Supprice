@@ -1,0 +1,6 @@
+{
+  "name": "Diwali Surprise for Saba",
+  "description": "A handcrafted, warm, and intimate digital Diwali gift created especially for Saba.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
